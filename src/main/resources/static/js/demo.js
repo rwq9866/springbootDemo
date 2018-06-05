@@ -13,7 +13,8 @@ function add() {
 				};
 	$.post(url,data,function(result){
 		$("#aa").html(result);
-	})
+		window.location.reload();
+	});
 }
 
 function del(id){
@@ -21,5 +22,17 @@ function del(id){
 	var data = {"id":id};
 	$.post(url,data,function(result){
 		console.log(result);
+		window.location.reload();
 	});
+}
+
+function f(user){
+	alert(user);
+	var obj2=eval("("+user+")");  
+	console.log(obj2);
+	console.log(obj2.id);
+	console.log(typeof obj2);
+}
+function modi(id){
+	
 }
