@@ -61,7 +61,7 @@ public class DemoController2 {
 		// 默认的为application/json,而谷歌浏览器所期望的值应该是text/html
 		res.setHeader("Content-type", "text/html");
 		// 设置响应头 设置 导出的表的名称
-		res.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode("测试表", "utf-8") + ".xls");
+		res.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode("个人信息表", "utf-8") + ".xlsx");
 		// 设置响应数据编码格式
 		res.setCharacterEncoding("utf-8");
 		List<User> list = demoService.findAll();
