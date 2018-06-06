@@ -19,13 +19,14 @@
 			</p>
 			<p>薪资:&nbsp;<input type="number" id="salary" placeholder="请输入你的薪资..."/></p>
 			<p>家庭住址:&nbsp;<input type="text" id="address" placeholder="请输入你的家庭住址..."/></p>
+			<p><input type="hidden" id="createtime"/></p>
 			<P>
 				<input type="button" id="add" value="提交"/>
 				<input type="button" id="m" value="提交修改"/>
 			</P>
 		</fieldset>
 	</div>
-	<div>
+	<div align="center">
 		<fieldset>
 			<legend id="cz2">操作栏</legend>
 			<input type="button" id="export" value="导出"/>
@@ -39,7 +40,7 @@
 			</div>
 		</fieldset>
 	</div>
-	<div>
+	<div align="center">
 		<table>
 			<thead>
 				<tr align="center">
@@ -49,6 +50,7 @@
 					<td>性别</td>
 					<td>薪资</td>
 					<td>家庭住址</td>
+					<td>创建时间</td>
 					<td>操作</td>
 				</tr>
 			</thead>
@@ -60,6 +62,7 @@
 					<td th:text = "${u.gender}"></td>
 					<td th:text = "${u.salary}"></td>
 					<td th:text = "${u.address}"></td>
+					<td th:text = "${u.createtime}"></td>
 					<td>
 						<input type="button" value="查看" th:onclick = "'javascript:f(\''+${u}+'\')'"/>
 						<input type="button" value="修改" th:onclick = "'javascript:modi(\''+${u}+'\')'"/>
@@ -68,6 +71,11 @@
 				</tr>
 			</tbody>
 		</table>
+		<p>
+			<input type="button" value="上一页" id="previous"/>
+			<input type="text" id="page" value="1"/>
+			<input type="button" value="下一页" id="next"/>
+		</p>
 	</div>
 </body>
 </html>

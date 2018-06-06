@@ -1,7 +1,9 @@
 package com.muyou.springbootDemo.domian;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -27,16 +29,20 @@ public class User implements Serializable {
 	private char gender;
 	@Excel(name = "薪资", isImportField = "salary")
 	private double salary;
-	@Excel(name = "家庭住址", isImportField = "address")
+	@Excel(name = "家庭住址",width = 30, isImportField = "address")
 	private String address;
-
-	public User(String id, String name, int age, char gender, double salary, String address) {
+	@Excel(name = "创建时间",width = 20,isImportField = "createtime")
+	private String createtime;
+	
+	public User(String id, String name, int age, char gender, double salary, String address, String createtime) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.salary = salary;
 		this.address = address;
+		this.createtime = createtime;
 	}
 
 	public User() {
@@ -89,11 +95,19 @@ public class User implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public String getCreatetime() {
+		return createtime;
+	}
+
+	public void setCreatetime(String createtime) {
+		this.createtime = createtime;
+	}
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + ", salary=" + salary
-				+ ", address=" + address + "]";
+				+ ", address=" + address + ", createtime=" + createtime + "]";
 	}
 
 }

@@ -42,8 +42,9 @@ function m() {
 				"gender":$("input[name='sex']:checked").val(),
 				"salary":$("#salary").val(),
 				"address":$("#address").val(),
+				"createtime":$("#createtime").val(),
 				};
-	if($("#name").val().trim() == "" || $("#age").val().trim() == "" || $("#salary").val().trim() == "" || $("#address").val().trim() == ""){
+	if($("#name").val().trim() == "" || $("#age").val().trim() == "" || $("#salary").val().trim() == "" || $("#address").val().trim() == "" || $("#createtime").val().trim() == ""){
 		alert("每条信息都需要填写哟!");
 	}else{
 		if(confirm("确定要修改该数据?")){
@@ -90,6 +91,7 @@ function zh(user){
 	$("#age").val(aa[5]);
 	$("#salary").val(aa[9]);
 	$("#address").val(aa[11]);
+	$("#createtime").val(aa[13]);
 	$("input[name='sex']").each(function(){  if($(this).val() == aa[7]) $(this).prop( "checked", true );});
 }
 

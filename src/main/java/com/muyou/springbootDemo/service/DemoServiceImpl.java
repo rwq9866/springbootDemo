@@ -1,5 +1,7 @@
 package com.muyou.springbootDemo.service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -22,6 +24,7 @@ public class DemoServiceImpl implements DemoService {
 
 	@Override
 	public User add(User user) {
+		user.setCreatetime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		return demoRepository.saveAndFlush(user);
 	}
 
