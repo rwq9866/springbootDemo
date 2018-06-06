@@ -10,4 +10,6 @@ public interface DemoService {
 	User add(User user);
 
 	void del(String id);
+
+	User modi(User user);
 }

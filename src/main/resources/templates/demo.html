@@ -10,7 +10,7 @@
 	<h1 id="aa">SpringBoot!!!</h1>
 	<div>
 		<fieldset>
-			<legend id="">添加</legend>
+			<legend id="cz">添加</legend>
 			<p>姓名:&nbsp;<input type="text" id="name" placeholder="请输入你的姓名..."/></p>
 			<p>年龄:&nbsp;<input type="number" id="age" placeholder="请输入你的年龄..." max="200"/></p>
 			<p>性别:
@@ -19,7 +19,10 @@
 			</p>
 			<p>薪资:&nbsp;<input type="number" id="salary" placeholder="请输入你的薪资..."/></p>
 			<p>家庭住址:&nbsp;<input type="text" id="address" placeholder="请输入你的家庭住址..."/></p>
-			<P><input type="button" id="add" value="提交"/></P>
+			<P>
+				<input type="button" id="add" value="提交"/>
+				<input type="button" id="m" value="提交修改"/>
+			</P>
 		</fieldset>
 	</div>
 	<div>
@@ -45,7 +48,7 @@
 					<td th:text = "${u.address}"></td>
 					<td>
 						<input type="button" value="查看" th:onclick = "'javascript:f(\''+${u}+'\')'"/>
-						<input type="button" value="修改" th:onclick = "'javascript:modi(\''+${u.id}+'\')'"/>
+						<input type="button" value="修改" th:onclick = "'javascript:modi(\''+${u}+'\')'"/>
 						<input type="button" value="删除" th:onclick = "'javascript:del(\''+${u.id}+'\')'" />
 					</td>
 				</tr>

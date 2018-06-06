@@ -29,5 +29,10 @@ public class DemoServiceImpl implements DemoService {
 	public void del(String id) {
 		demoRepository.delete(id);
 	}
+
+	@Override
+	public User modi(User user) {
+		return demoRepository.save(user);
+	}
 	
 }

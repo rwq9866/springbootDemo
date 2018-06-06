@@ -1759,3 +1759,284 @@ Field error in object 'user' on field 'salary': rejected value []; codes [typeMi
 2018-06-05 17:11:01.733  INFO 9180 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-06-05 17:11:01.734  INFO 9180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-06-05 17:11:01.769  INFO 9180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2018-06-06 09:40:59.513  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 09:40:59.516  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 09:41:00.885  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55440578: startup date [Wed Jun 06 09:41:00 CST 2018]; root of context hierarchy
+2018-06-06 09:41:09.035  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 09:41:09.254  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 09:41:09.287  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 09:41:10.249  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 09:41:10.249  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9394 ms
+2018-06-06 09:41:10.520  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 09:41:10.520  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 09:41:10.521  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 09:41:10.521  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 09:41:10.521  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 09:41:10.521  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 09:41:10.521  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 09:41:15.964  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 09:41:18.908  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 09:41:20.147  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55440578: startup date [Wed Jun 06 09:41:00 CST 2018]; root of context hierarchy
+2018-06-06 09:41:20.353  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 09:41:20.356  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 09:41:20.357  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 09:41:20.357  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 09:41:20.359  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 09:41:20.360  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 09:41:20.430  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 09:41:20.430  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 09:41:20.512  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 09:41:21.815  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 09:41:21.879  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 09:41:22.189  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 09:41:22.197  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 23.247 seconds (JVM running for 24.182)
+2018-06-06 09:41:35.885  INFO 2088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 09:41:35.885  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 09:41:36.317  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 432 ms
+2018-06-06 11:33:14.642  INFO 2088 --- [Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55440578: startup date [Wed Jun 06 09:41:00 CST 2018]; root of context hierarchy
+2018-06-06 11:33:15.114  INFO 2088 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:33:15.140  INFO 2088 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:23.546  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:33:23.547  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:33:23.577  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da9f1f: startup date [Wed Jun 06 11:33:23 CST 2018]; root of context hierarchy
+2018-06-06 11:33:25.572  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:33:25.573  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:33:25.573  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:33:25.631  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:33:25.649  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2073 ms
+2018-06-06 11:33:25.766  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:33:25.766  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:33:25.766  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:33:25.766  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:33:25.767  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:33:25.767  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:33:25.767  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:33:26.807  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:28.343  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:28.630  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da9f1f: startup date [Wed Jun 06 11:33:23 CST 2018]; root of context hierarchy
+2018-06-06 11:33:28.655  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:33:28.656  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:33:28.657  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:33:28.657  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:33:28.658  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:33:28.659  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:33:28.679  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:28.680  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:28.694  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:28.838  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:33:28.935  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:33:28.951  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:33:28.955  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 5.673 seconds (JVM running for 6750.834)
+2018-06-06 11:33:40.428  INFO 2088 --- [Thread-11] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@da9f1f: startup date [Wed Jun 06 11:33:23 CST 2018]; root of context hierarchy
+2018-06-06 11:33:40.432  INFO 2088 --- [Thread-11] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:33:40.434  INFO 2088 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:40.957  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:33:40.957  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:33:40.959  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@66c5d841: startup date [Wed Jun 06 11:33:40 CST 2018]; root of context hierarchy
+2018-06-06 11:33:41.526  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:33:41.527  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:33:41.528  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:33:41.547  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:33:41.548  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 589 ms
+2018-06-06 11:33:41.594  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:33:41.594  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:33:41.594  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:33:41.594  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:33:41.594  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:33:41.595  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:33:41.595  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:33:41.907  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:42.096  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:33:42.258  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@66c5d841: startup date [Wed Jun 06 11:33:40 CST 2018]; root of context hierarchy
+2018-06-06 11:33:42.269  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:33:42.274  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:33:42.275  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:33:42.275  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:33:42.277  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:33:42.278  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:33:42.287  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:42.288  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:42.302  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:33:42.394  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:33:42.447  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:33:42.480  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:33:42.484  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.575 seconds (JVM running for 6764.363)
+2018-06-06 11:34:18.385  INFO 2088 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@66c5d841: startup date [Wed Jun 06 11:33:40 CST 2018]; root of context hierarchy
+2018-06-06 11:34:18.386  INFO 2088 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:34:18.387  INFO 2088 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:18.654  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:34:18.654  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:34:18.656  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78dfdc51: startup date [Wed Jun 06 11:34:18 CST 2018]; root of context hierarchy
+2018-06-06 11:34:19.364  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:34:19.365  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:34:19.365  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:34:19.427  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:34:19.429  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 773 ms
+2018-06-06 11:34:19.534  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:34:19.534  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:34:19.534  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:34:19.535  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:34:19.536  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:34:19.539  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:34:19.540  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:34:19.902  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:20.067  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:20.247  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78dfdc51: startup date [Wed Jun 06 11:34:18 CST 2018]; root of context hierarchy
+2018-06-06 11:34:20.258  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:34:20.263  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:34:20.263  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:34:20.264  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:34:20.266  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:34:20.267  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:34:20.277  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:20.278  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:20.292  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:20.369  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:34:20.411  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:34:20.421  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:34:20.423  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.81 seconds (JVM running for 6802.301)
+2018-06-06 11:34:25.851  INFO 2088 --- [Thread-25] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78dfdc51: startup date [Wed Jun 06 11:34:18 CST 2018]; root of context hierarchy
+2018-06-06 11:34:25.854  INFO 2088 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:34:25.873  INFO 2088 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:26.235  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:34:26.235  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:34:26.237  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e6b4868: startup date [Wed Jun 06 11:34:26 CST 2018]; root of context hierarchy
+2018-06-06 11:34:26.836  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:34:26.837  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:34:26.838  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:34:26.855  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:34:26.856  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 619 ms
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:34:26.897  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:34:27.093  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:27.172  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:34:27.314  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e6b4868: startup date [Wed Jun 06 11:34:26 CST 2018]; root of context hierarchy
+2018-06-06 11:34:27.325  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:34:27.326  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:34:27.327  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:34:27.327  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:34:27.329  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:34:27.331  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:34:27.341  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:27.342  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:27.355  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:34:27.421  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:34:27.460  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:34:27.480  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:34:27.482  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.28 seconds (JVM running for 6809.36)
+2018-06-06 11:35:07.471  INFO 2088 --- [Thread-32] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6e6b4868: startup date [Wed Jun 06 11:34:26 CST 2018]; root of context hierarchy
+2018-06-06 11:35:07.473  INFO 2088 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:35:07.474  INFO 2088 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:35:07.716  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:35:07.716  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:35:07.718  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78c2973b: startup date [Wed Jun 06 11:35:07 CST 2018]; root of context hierarchy
+2018-06-06 11:35:08.212  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:35:08.212  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:35:08.213  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:35:08.247  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:35:08.248  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 530 ms
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:35:08.294  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:35:08.295  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:35:08.531  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:35:08.594  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:35:08.731  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78c2973b: startup date [Wed Jun 06 11:35:07 CST 2018]; root of context hierarchy
+2018-06-06 11:35:08.739  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:35:08.741  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:35:08.742  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:35:08.742  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:35:08.742  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/modi]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.nodi(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:35:08.744  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:35:08.744  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:35:08.752  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:08.752  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:08.760  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:08.817  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:35:08.850  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:35:08.863  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:35:08.865  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.187 seconds (JVM running for 6850.742)
+2018-06-06 11:39:16.064  INFO 2088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 11:39:16.065  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 11:39:16.071  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2018-06-06 11:45:55.382  INFO 2088 --- [Thread-39] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78c2973b: startup date [Wed Jun 06 11:35:07 CST 2018]; root of context hierarchy
+2018-06-06 11:45:55.393  INFO 2088 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:45:55.394  INFO 2088 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:45:55.880  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:45:55.881  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:45:55.883  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38a20520: startup date [Wed Jun 06 11:45:55 CST 2018]; root of context hierarchy
+2018-06-06 11:45:56.478  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:45:56.479  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:45:56.479  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:45:56.498  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:45:56.499  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 616 ms
+2018-06-06 11:45:56.541  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:45:56.541  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:45:56.542  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:45:56.542  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:45:56.542  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:45:56.542  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:45:56.542  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:45:56.802  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:45:56.924  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:45:57.047  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38a20520: startup date [Wed Jun 06 11:45:55 CST 2018]; root of context hierarchy
+2018-06-06 11:45:57.056  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:45:57.062  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:45:57.062  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:45:57.063  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:45:57.063  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/modi]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.nodi(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:45:57.064  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:45:57.064  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:45:57.070  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:45:57.070  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:45:57.082  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:45:57.149  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:45:57.189  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:45:57.211  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:45:57.215  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.39 seconds (JVM running for 7499.082)
+2018-06-06 11:47:53.739  INFO 2088 --- [Thread-46] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38a20520: startup date [Wed Jun 06 11:45:55 CST 2018]; root of context hierarchy
+2018-06-06 11:47:53.742  INFO 2088 --- [Thread-46] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-06 11:47:53.742  INFO 2088 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:47:54.126  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Starting DemoApplication on R with PID 2088 (D:\workspace_oxygen\springbootDemo\target\classes started by Administrator in D:\workspace_oxygen\springbootDemo)
+2018-06-06 11:47:54.126  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : The following profiles are active: dev
+2018-06-06 11:47:54.127  INFO 2088 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c67bbdb: startup date [Wed Jun 06 11:47:54 CST 2018]; root of context hierarchy
+2018-06-06 11:47:54.675  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:47:54.676  INFO 2088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 11:47:54.677  INFO 2088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-06 11:47:54.697  INFO 2088 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 11:47:54.698  INFO 2088 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 571 ms
+2018-06-06 11:47:54.747  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'MyFilter' to urls: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'remoteIpFilter' to: [/*]
+2018-06-06 11:47:54.748  INFO 2088 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-06 11:47:54.966  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:47:55.029  INFO 2088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:47:55.180  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c67bbdb: startup date [Wed Jun 06 11:47:54 CST 2018]; root of context hierarchy
+2018-06-06 11:47:55.188  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ht/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController.demo(org.springframework.ui.Model)
+2018-06-06 11:47:55.189  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/add]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.add(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:47:55.189  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/demo]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.demo()
+2018-06-06 11:47:55.189  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/del]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.del(java.lang.String)
+2018-06-06 11:47:55.190  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/de/modi]}" onto public java.lang.String com.muyou.springbootDemo.controller.DemoController2.nodi(com.muyou.springbootDemo.domian.User)
+2018-06-06 11:47:55.191  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:47:55.191  INFO 2088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:47:55.197  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:47:55.197  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:47:55.211  INFO 2088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:47:55.268  INFO 2088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-06 11:47:55.304  INFO 2088 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-06 11:47:55.316  INFO 2088 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-06 11:47:55.318  INFO 2088 --- [restartedMain] c.muyou.springbootDemo.DemoApplication   : Started DemoApplication in 1.231 seconds (JVM running for 7617.183)
+2018-06-06 11:48:36.499  INFO 2088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 11:48:36.499  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 11:48:36.503  INFO 2088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms

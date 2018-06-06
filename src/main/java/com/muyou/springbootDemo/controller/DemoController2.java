@@ -31,4 +31,10 @@ public class DemoController2 {
 		demoService.del(id);
 		return "删除成功!";
 	}
+	
+	@RequestMapping("modi")
+	public String nodi(User user) {
+		User user2 = demoService.modi(user);
+		return (!"".equals(user2) && user2 != null) ?"修改成功":"修改失败";
+	}
 }
