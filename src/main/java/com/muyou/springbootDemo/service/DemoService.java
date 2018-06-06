@@ -12,4 +12,6 @@ public interface DemoService {
 	void del(String id);
 
 	User modi(User user);
+
+	void save(List<User> list);
 }

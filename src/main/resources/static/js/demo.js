@@ -1,8 +1,16 @@
 $(function() {
 	$("#add").click(add);
 	$("#m").hide();
+	$("#im").hide();
 	$("#m").click(m);
+	$("#export").click(expo);
+	$("#import").click(impo);
+	$("#cancel").click(canc);
+	// 提交导入
+	$("#tjdr").click(tjdr);
 });
+
+// 添加
 function add() {
 	var url = "/de/add";
 	var data = {
@@ -15,8 +23,7 @@ function add() {
 	if($("#name").val().trim() == "" || $("#age").val().trim() == "" || $("#salary").val().trim() == "" || $("#address").val().trim() == ""){
 		alert("每条信息都需要填写哟!");
 	}else{
-		var message = confirm("确定要添加该数据?");
-		if(message){
+		if(confirm("确定要添加该数据?")){
 			$.post(url,data,function(result){
 				alert($("#name").val() + "的个人信息" + result);
 				window.location.reload();
@@ -25,6 +32,7 @@ function add() {
 	}
 }
 
+// 修改
 function m() {
 	var url = "/de/modi";
 	var data = {
@@ -38,8 +46,7 @@ function m() {
 	if($("#name").val().trim() == "" || $("#age").val().trim() == "" || $("#salary").val().trim() == "" || $("#address").val().trim() == ""){
 		alert("每条信息都需要填写哟!");
 	}else{
-		var message = confirm("确定要修改该数据?");
-		if(message){
+		if(confirm("确定要修改该数据?")){
 			$.post(url,data,function(result){
 				alert($("#name").val() + "的个人信息" + result);
 				window.location.reload();
@@ -47,25 +54,7 @@ function m() {
 		}
 	}
 }
-
-function del(id){
-	var url = "/de/del";
-	var data = {"id":id};
-	var message = confirm("确定要删除该数据?");
-	if(message){
-		$.post(url,data,function(result){
-			alert(result);
-			window.location.reload();
-		});
-	}
-}
-
-function f(user){
-	$("#cz").html("查看详情");
-	$("#add").hide();
-	$("#m").hide();
-	zh(user);
-}
+// 修改按钮点击操作
 function modi(user){
 	$("#cz").html("修改");
 	$("#add").hide();
@@ -73,6 +62,27 @@ function modi(user){
 	zh(user);
 }
 
+// 删除
+function del(id){
+	var url = "/de/del";
+	var data = {"id":id};
+	if(confirm("确定要删除该数据?")){
+		$.post(url,data,function(result){
+			alert(result);
+			window.location.reload();
+		});
+	}
+}
+
+// 查看详情
+function f(user){
+	$("#cz").html("查看详情");
+	$("#add").hide();
+	$("#m").hide();
+	zh(user);
+}
+
+// 数据转换
 function zh(user){
 	var aa = user.substring(user.indexOf("[") + 1,user.indexOf("]")).replace(/=/g,",").split(",");
 	$("#m").data("id",aa[1]);
@@ -81,4 +91,63 @@ function zh(user){
 	$("#salary").val(aa[9]);
 	$("#address").val(aa[11]);
 	$("input[name='sex']").each(function(){  if($(this).val() == aa[7]) $(this).prop( "checked", true );});
+}
+
+// 导出
+function expo() {
+	if(confirm("导出?")){
+		// 方法一
+//	        var eleForm = $("<form method='get'></form>");  
+//	        eleForm.attr("action","/de/downloadExcel");  
+//	        $(document.body).append(eleForm);  
+//	        //提交表单，实现下载  
+//	        eleForm.submit();
+        // 方法二:
+        window.location.href="/de/downloadExcel";
+	}
+}
+
+// 导入
+function impo(){
+	$("#cz2").html("导入");
+	$("#export").hide();
+	$("#import").hide();
+	$("#im").show();
+}
+
+// 取消按钮事件
+function canc(){
+	$("#cz2").html("操作栏");
+	$("#export").show();
+	$("#import").show();
+	$("#im").hide();
+}
+
+// 提交导入
+function tjdr(){
+	if($("#file")[0].files[0] == undefined){
+		alert("不能导入空文件哟");
+	}else{
+		var formData = new FormData();
+		formData.append("file",$("#file")[0].files[0]);
+		$.ajax({
+			url:"/de/importData",
+			type: "POST",
+	        data: formData,
+	        /**
+	        *必须false才会自动加上正确的Content-Type
+	        */
+	        contentType: false,
+	        /**
+	        * 必须false才会避开jQuery对 formdata 的默认处理
+	        * XMLHttpRequest会对 formdata 进行正确的处理
+	        */
+	        processData: false,
+	        success:function(data){
+	        	alert("导入成功!");
+	        	window.location.reload();
+	        }
+		});
+	}
+	
 }

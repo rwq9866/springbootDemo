@@ -34,5 +34,10 @@ public class DemoServiceImpl implements DemoService {
 	public User modi(User user) {
 		return demoRepository.save(user);
 	}
+
+	@Override
+	public void save(List<User> list) {
+		demoRepository.save(list);
+	}
 	
 }
