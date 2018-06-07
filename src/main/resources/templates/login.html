@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>登录</title>
+<script type="text/javascript" th:src = "@{/webjars/jquery/3.3.1-1/jquery.js}"></script>
+<script type="text/javascript" th:src = "@{../js/login.js}"></script>
+</head>
+<body>
+	<div align="center">
+		<h1 id="aa">登录</h1>
+		<fieldset>
+			<legend id="cz">欢迎你!</legend>
+			<p>用户名:&nbsp;<input id="username" placeholder="请输入你的用户名..."/></p>
+			<p>密码:&nbsp;<input type="password" id="password" placeholder="请输入你的密码..."/></p>
+			<p>验证码:&nbsp;<input id = "code" placeholder="请输入验证码"/></p>
+			<p><img th:src="@{/login/getCode}" alt="验证码" title="点击更换" onclick="this.src='/login/getCode?x='+Math.random();"/></p>
+			<P>
+				<input type="button" id="login" value="登录"/>
+				<input type="button" id="register" value="注册"/>
+			</P>
+		</fieldset>
+	</div>
+</body>
+</html>
