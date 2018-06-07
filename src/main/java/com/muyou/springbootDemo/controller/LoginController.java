@@ -21,7 +21,6 @@ public class LoginController {
 	
 	@RequestMapping("/getCode")
 	public void getCode(HttpServletRequest req,HttpServletResponse res) throws IOException {
-		System.out.println("cehi1");
 		// 创建验证码及图片
 		Object[] ob = CodeImageUtil.createImage();
 		// 将验证码存入session
@@ -32,6 +31,5 @@ public class LoginController {
 		OutputStream os = res.getOutputStream();
 		ImageIO.write((BufferedImage)ob[1], "jpg", os);
 		os.close();
-		System.out.println("ceshi");
 	}
 }
