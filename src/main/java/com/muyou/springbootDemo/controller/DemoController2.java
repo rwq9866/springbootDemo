@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.muyou.springbootDemo.domian.User;
+import com.muyou.springbootDemo.domian.Person;
 import com.muyou.springbootDemo.service.DemoService;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
@@ -37,9 +37,9 @@ public class DemoController2 {
 	}
 
 	@RequestMapping("add")
-	public String add(User user) {
-		User user2 = demoService.add(user);
-		return (!"".equals(user2) && user2 != null) ? "添加成功" : "添加失败";
+	public String add(Person person) {
+		Person person2 = demoService.add(person);
+		return (!"".equals(person2) && person2 != null) ? "添加成功" : "添加失败";
 	}
 
 	@RequestMapping("del")
@@ -49,9 +49,9 @@ public class DemoController2 {
 	}
 
 	@RequestMapping("modi")
-	public String nodi(User user) {
-		User user2 = demoService.modi(user);
-		return (!"".equals(user2) && user2 != null) ? "修改成功" : "修改失败";
+	public String nodi(Person person) {
+		Person person2 = demoService.modi(person);
+		return (!"".equals(person2) && person2 != null) ? "修改成功" : "修改失败";
 	}
 
 	// 导出全部数据(数据量少时 比如: 少于20000条数据)
@@ -64,8 +64,8 @@ public class DemoController2 {
 		res.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode("个人信息表", "utf-8") + ".xlsx");
 		// 设置响应数据编码格式
 		res.setCharacterEncoding("utf-8");
-		List<User> list = demoService.findAll();
-		Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams("个人基本信息", "个人"), User.class, list);
+		List<Person> list = demoService.findAll();
+		Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams("个人基本信息", "个人"), Person.class, list);
 		workbook.write(res.getOutputStream());
 		long t2 = System.currentTimeMillis();
 		System.out.println(t2 - t1);
@@ -86,7 +86,7 @@ public class DemoController2 {
 			params.setHeadRows(1);
 			// params.setSheetNum(5);
 			System.out.println(filePath);
-			List<User> list = ExcelImportUtil.importExcel(new File(filePath + File.separator + fileName),User.class, params);
+			List<Person> list = ExcelImportUtil.importExcel(new File(filePath + File.separator + fileName),Person.class, params);
 			System.out.println(list);
 			demoService.save(list);
 		}

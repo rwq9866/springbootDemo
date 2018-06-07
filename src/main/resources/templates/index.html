@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"/>
-<title>demo</title>
+<title>主页</title>
 <script type="text/javascript" th:src = "@{/webjars/jquery/3.3.1-1/jquery.js}"></script>
-<script type="text/javascript" th:src = "@{../js/demo.js}"></script>
+<script type="text/javascript" th:src = "@{../js/index.js}"></script>
 </head>
 <body>
 	<h1 id="aa">SpringBoot!!!</h1>
@@ -55,18 +55,18 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each = "u:${users}" align="center">
-					<td th:text = "${u.id}"></td>
-					<td th:text = "${u.name}"></td>
-					<td th:text = "${u.age}"></td>
-					<td th:text = "${u.gender}"></td>
-					<td th:text = "${u.salary}"></td>
-					<td th:text = "${u.address}"></td>
-					<td th:text = "${u.createtime}"></td>
+				<tr th:each = "p:${persons}" align="center">
+					<td th:text = "${p.id}"></td>
+					<td th:text = "${p.name}"></td>
+					<td th:text = "${p.age}"></td>
+					<td th:text = "${p.gender}"></td>
+					<td th:text = "${p.salary}"></td>
+					<td th:text = "${p.address}"></td>
+					<td th:text = "${p.createtime}"></td>
 					<td>
-						<input type="button" value="查看" th:onclick = "'javascript:f(\''+${u}+'\')'"/>
-						<input type="button" value="修改" th:onclick = "'javascript:modi(\''+${u}+'\')'"/>
-						<input type="button" value="删除" th:onclick = "'javascript:del(\''+${u.id}+'\')'" />
+						<input type="button" value="查看" th:onclick = "'javascript:f(\''+${p}+'\')'"/>
+						<input type="button" value="修改" th:onclick = "'javascript:modi(\''+${p}+'\')'"/>
+						<input type="button" value="删除" th:onclick = "'javascript:del(\''+${p.id}+'\')'" />
 					</td>
 				</tr>
 			</tbody>
@@ -76,6 +76,14 @@
 			<input type="text" id="page" value="1"/>
 			<input type="button" value="下一页" id="next"/>
 		</p>
+	</div>
+	<div>
+		<fieldset>
+			<legend>Redis</legend>
+			key:&nbsp;<input type="text" id="ke"/>
+			value:&nbsp;<input type="text" id="valu"/>
+			<input type="button" onclick="redisss()" value="提交"/>
+		</fieldset>
 	</div>
 </body>
 </html>

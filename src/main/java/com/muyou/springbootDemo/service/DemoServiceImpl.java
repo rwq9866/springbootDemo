@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.muyou.springbootDemo.domian.User;
+import com.muyou.springbootDemo.domian.Person;
 import com.muyou.springbootDemo.repository.DemoRepository;
 
 @Service
@@ -18,14 +18,14 @@ public class DemoServiceImpl implements DemoService {
 	private DemoRepository demoRepository;
 	
 	@Override
-	public List<User> findAll() {
+	public List<Person> findAll() {
 		return demoRepository.findAll();
 	}
 
 	@Override
-	public User add(User user) {
-		user.setCreatetime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-		return demoRepository.saveAndFlush(user);
+	public Person add(Person person) {
+		person.setCreatetime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+		return demoRepository.saveAndFlush(person);
 	}
 
 	@Override
@@ -34,12 +34,12 @@ public class DemoServiceImpl implements DemoService {
 	}
 
 	@Override
-	public User modi(User user) {
-		return demoRepository.save(user);
+	public Person modi(Person person) {
+		return demoRepository.save(person);
 	}
 
 	@Override
-	public void save(List<User> list) {
+	public void save(List<Person> list) {
 		demoRepository.save(list);
 	}
 	

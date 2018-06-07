@@ -15,26 +15,26 @@ import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 
 @Entity
 @ExcelTarget("user")
-public class User implements Serializable {
+public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GenericGenerator(name = "idGenerator", strategy = "uuid")
 	@GeneratedValue(generator = "idGenerator")
 	private String id;
-	@Excel(name = "姓名", isImportField = "name")
+	@Excel(name = "姓名", orderNum = "1",isImportField = "name")
 	private String name;
-	@Excel(name = "年龄", isImportField = "age")
+	@Excel(name = "年龄", orderNum = "2",isImportField = "age")
 	private int age;
-	@Excel(name = "性别", isImportField = "gender")
+	@Excel(name = "性别", orderNum = "3",isImportField = "gender")
 	private char gender;
-	@Excel(name = "薪资", isImportField = "salary")
+	@Excel(name = "薪资", orderNum = "4",isImportField = "salary")
 	private double salary;
-	@Excel(name = "家庭住址",width = 30, isImportField = "address")
+	@Excel(name = "家庭住址",width = 30,orderNum = "5", isImportField = "address")
 	private String address;
-	@Excel(name = "创建时间",width = 20,isImportField = "createtime")
+	@Excel(name = "创建时间",width = 20,orderNum = "6",isImportField = "createtime")
 	private String createtime;
 	
-	public User(String id, String name, int age, char gender, double salary, String address, String createtime) {
+	public Person(String id, String name, int age, char gender, double salary, String address, String createtime) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -45,7 +45,7 @@ public class User implements Serializable {
 		this.createtime = createtime;
 	}
 
-	public User() {
+	public Person() {
 	}
 
 	public String getId() {

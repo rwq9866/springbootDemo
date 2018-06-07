@@ -2,16 +2,16 @@ package com.muyou.springbootDemo.service;
 
 import java.util.List;
 
-import com.muyou.springbootDemo.domian.User;
+import com.muyou.springbootDemo.domian.Person;
 
 public interface DemoService {
-	List<User> findAll();
+	List<Person> findAll();
 
-	User add(User user);
+	Person add(Person person);
 
 	void del(String id);
 
-	User modi(User user);
+	Person modi(Person person);
 
-	void save(List<User> list);
+	void save(List<Person> list);
 }

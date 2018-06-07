@@ -56,11 +56,11 @@ function m() {
 	}
 }
 // 修改按钮点击操作
-function modi(user){
+function modi(person){
 	$("#cz").html("修改");
 	$("#add").hide();
 	$("#m").show();
-	zh(user);
+	zh(person);
 }
 
 // 删除
@@ -76,16 +76,16 @@ function del(id){
 }
 
 // 查看详情
-function f(user){
+function f(person){
 	$("#cz").html("查看详情");
 	$("#add").hide();
 	$("#m").hide();
-	zh(user);
+	zh(person);
 }
 
 // 数据转换
-function zh(user){
-	var aa = user.substring(user.indexOf("[") + 1,user.indexOf("]")).replace(/=/g,",").split(",");
+function zh(person){
+	var aa = person.substring(person.indexOf("[") + 1,person.indexOf("]")).replace(/=/g,",").split(",");
 	$("#m").data("id",aa[1]);
 	$("#name").val(aa[3]);
 	$("#age").val(aa[5]);
@@ -151,5 +151,15 @@ function tjdr(){
 	        }
 		});
 	}
-	
+}
+
+function redisss(){
+	var url = "/redi/ss";
+	var data = {
+			"ke":$("#ke").val(),
+			"valu":$("#valu").val()
+	};
+	$.post(url,data,function(result){
+		alert(result);
+	});
 }

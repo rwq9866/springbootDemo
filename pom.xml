@@ -30,6 +30,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<!-- 剔除默认日志logback -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.springframework.boot</groupId> -->
+<!-- 					<artifactId>spring-boot-starter-logging</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
 		</dependency>
 
 		<!-- 测试模块，包括JUnit、Hamcrest、Mockito -->
@@ -74,7 +81,7 @@
 			<artifactId>jquery</artifactId>
 			<version>3.3.1-1</version>
 		</dependency>
-		
+
 		<!-- easypoi -->
 		<dependency>
 			<groupId>cn.afterturn</groupId>
@@ -90,6 +97,23 @@
 			<groupId>cn.afterturn</groupId>
 			<artifactId>easypoi-annotation</artifactId>
 			<version>3.1.0</version>
+		</dependency>
+
+		<!-- redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		
+		<!-- 日志 log4j2 -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-log4j2</artifactId> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.muyou</groupId>
+			<artifactId>utilModule</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
