@@ -163,3 +163,10 @@ function redisss(){
 		alert(result);
 	});
 }
+
+function mail(){
+	var url = "/sendMail";
+	$.getJSON(url,function(result){
+		alert(result);
+	});
+}

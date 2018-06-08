@@ -23,10 +23,10 @@ public class DemoController {
 		return "login";
 	}
 	
-	@RequestMapping("demo")
+	@RequestMapping("index")
 	public String demo(Model model) {
 		List<Person> list = demoservice.findAll();
 		model.addAttribute("persons", list);
-		return "demo";
+		return "index";
 	}
 }
